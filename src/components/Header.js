@@ -1,6 +1,6 @@
 function Header(){
     return(
-        <header className="bg--primary text--light">
+        <header className="bg--primary text--light mb-5">
             <div className="container">
                 <div className="row">
                     <div className="col-12">

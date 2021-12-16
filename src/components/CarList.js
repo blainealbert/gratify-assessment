@@ -1,37 +1,23 @@
-import {useEffect, useState} from 'react';
+// import {useEffect, useState} from 'react';
 
 function CarList(props) {
-
-    const [cars, setCars] = useState([]);
-
-    useEffect(() => {
-        fetch('https://vpic.nhtsa.dot.gov/api/vehicles/getallmakes?format=json', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            setCars(data.Results);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }, []);
-
-
     return (
-        <div>
-            <h2>Cars</h2>
-            <ul>
-                {cars.map(car => (
-                    <li key={car.id}>
-                        {car.Make_Name}
-                    </li>
-                ))}
-            </ul>
+        <div className="container mb-5">
+            <div className="row">
+                <div className="col-12 text-center">
+                    <div className="car-list bg--light shadow rounded p-3">
+                        <h2 className="car-list__title">Cars</h2>
+                        <div className="car-list__content">
+                            {props.cars.slice(0,10).map(car => (
+                                <div className="car-list__item" key={car.Model_ID}>
+                                    <p className="car-list__item-name">{car.Make_Name}</p>
+                                    <p className="car-list__model-name">{car.Model_Name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

@@ -1,19 +1,31 @@
 /* Vars */
 :root{
   --color-primary: #1601c3;
-  --color-secondary: #54595F;
+  --color-secondary: #f1f0ed;
   --color-text: #7A7A7A;
   --color-light: #FFF;
   --color-dark: #000;
 }
 
 /* Global */
+body{
+  font-size: 14px;
+}
+.app{
+  background-color: var(--color-secondary);
+}
 
 .bg--primary{
   background-color: var(--color-primary);
 }
 .bg--secondary{
   background-color: var(--color-secondary);
+}
+.bg--light{
+  background-color: var(--color-light);
+}
+.bg--dark{
+  background-color: var(--color-dark);
 }
 
 .text--light{
@@ -28,6 +40,12 @@
 /* Filter */
 
 /* Search Form */
+.car-search{
+  
+}
+.car-search input{
+  
+}
 
 /* List */
 
