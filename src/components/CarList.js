@@ -1,5 +1,3 @@
-// import {useEffect, useState} from 'react';
-
 function CarList(props) {
     function filterBy(filterVal) {
         return function ( item ) {

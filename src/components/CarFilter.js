@@ -1,6 +1,3 @@
-//import {react} from 'react';
-//dropdown for make and year
-//add search field for vehicle name
 import {useEffect} from 'react';
 function CarFilter(props) {
     useEffect(()=>{
