@@ -35,21 +35,64 @@ body{
   color: var(--color-dark);
 }
 
-/* Header */
-
-/* Filter */
-
-/* Search Form */
-.car-search{
-  
+/* Buttons */
+.btn--primary{
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: 0.1rem solid var(--color-primary);
 }
-.car-search input{
-  
+.btn--primary:hover{
+  background-color: var(--color-light);
+  color: var(--color-primary);
+}
+
+
+/* Forms */
+.car-filter__form, .car-search__form, .car-sort__form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.car-filter__input, .car-sort__input, .car-search__input{
+  font-size: 1rem;
+  padding: 0.325rem;
+  width: 100%;
+}
+.car-search label, .car-sort label, .car-filter label{
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.car-search .btn, .car-filter .btn{
+  width: 100%;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 992px){
+  .car-filter__input, .car-sort__input, .car-search__input{
+    margin-left: 0.25rem;
+    width: auto;
+  }
+  .car-search .btn, .car-filter .btn{
+    width: auto;
+    margin-left: 0.5rem;
+    margin-top: 0;
+  }
 }
 
 /* List */
-
-/* Footer */
-footer{
-  
+.car-list__content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.car-list__model-name{
+  background-color: var(--color-primary);
+  border-radius: 1.5rem;
+  color: var(--color-light);
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  font-weight: 600;
 }

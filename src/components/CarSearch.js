@@ -1,4 +1,8 @@
+import { useState } from 'react';
+
 function CarSearch(props) {
+    const [searchInput, setSearchInput] = useState("");
+
     const handleSearch = (e) => {
         e.preventDefault();
         const makeName = e.target.elements.make.value;
@@ -6,10 +10,13 @@ function CarSearch(props) {
             .then(response => response.json())
             .then(data => {
                 props.setCars(data.Results);
-                console.log(data.Results);
+                props.setCurrentMake(makeName);
+                props.setNotification("");
+                console.log(data);
             })
             .catch(error => {
                 console.log(error);
+                props.setNotification(error.message);
             }
         );
     }
@@ -18,16 +25,11 @@ function CarSearch(props) {
         <div className="container">
             <div className="row">
                 <div className="col-12 text-center">
-                    <div className="car-search bg--light shadow rounded mb-5 p-3">
-                        <div className="car-search__title">
-                            <h2>Search Cars by Make</h2>
-                        </div>
+                    <div className="car-search bg--light shadow rounded mb-4 p-3">
                         <form className="car-search__form" onSubmit={handleSearch} >
-                            <div className="car-search__form-group">
-                                <label htmlFor="car-search__input-make">Make: </label>
-                                <input type="text" name="make" id="car-search__input-make" className="car-search__input" />
-                                <input type="submit" value="Search" className="car-search__submit" />
-                            </div>
+                            <label htmlFor="car-search__input-make">Search for cars by make: </label>
+                            <input type="text" placeholder="Honda" name="make" id="car-search__input-make" className="car-search__input" onChange={e => setSearchInput(e.target.value)} />
+                            <input type="submit" value="Search" className="car-search__submit btn btn--primary" disabled={!searchInput}/>
                         </form>
                     </div>
                 </div>
