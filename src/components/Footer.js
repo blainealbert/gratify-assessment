@@ -4,7 +4,7 @@ function Footer() {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <h6 className="text-center mb-3">Code assessment by Blaine Albert for Gratify Payments</h6>
+                        <h6 className="text-center mb-3">Coded by Blaine Albert using the NHTSA API</h6>
                     </div>
                 </div>
             </div>
