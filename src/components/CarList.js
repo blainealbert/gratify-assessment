@@ -11,8 +11,6 @@ function CarList(props) {
                 return (a[field] > b[field]) - (a[field] < b[field])
             } else if(props.sortBy === "Z-A") {
                 return (a[field] < b[field]) - (a[field] > b[field])
-            } else{
-                return a;
             }
         };
     }
