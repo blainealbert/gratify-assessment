@@ -13,7 +13,7 @@ function CarSort(props) {
                 <div className="col-12 text-center">
                     <div className="car-sort bg--light shadow rounded mb-4 p-3">
                         <form className="car-sort__form" >
-                            <label htmlFor="car-sort__input-model">Sort Cars by Model: </label>
+                            <label htmlFor="car-sort__input-model">Sort car models by: </label>
                             <select name="sortBy" id="car-sort__input-model" className="car-sort__input" onChange={(e) => handleSort(e)} disabled={props.cars.length === 0}>
                                 <option value="">Select an option</option>
                                 <option value="A-Z">Alphabeitcal (A-Z)</option>
