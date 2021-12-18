@@ -14,13 +14,9 @@ import CarSort from './components/CarSort';
 function App() {
 
   const [cars, setCars] = useState([]);
-
   const [carFilter, setCarFilter] = useState("");
-
   const [notification, setNotification] = useState("Please search for a car make");
-
   const [currentMake, setCurrentMake] = useState("");
-
   const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
