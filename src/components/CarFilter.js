@@ -1,8 +1,4 @@
-import {useEffect} from 'react';
 function CarFilter(props) {
-    useEffect(()=>{
-        
-    },[]);
 
     const handleFilter = (e) => {
         e.preventDefault();

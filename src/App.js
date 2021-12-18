@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // Components
 import Header from './components/Header';
@@ -18,9 +18,6 @@ function App() {
   const [notification, setNotification] = useState("Please search for a car make");
   const [currentMake, setCurrentMake] = useState("");
   const [sortBy, setSortBy] = useState("");
-
-  useEffect(() => {
-  }, [carFilter]);
 
   return (
     <div className="app">

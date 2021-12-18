@@ -1,8 +1,4 @@
-import {useEffect} from 'react';
 function CarSort(props) {
-    useEffect(()=>{
-        
-    },[]);
 
     const handleSort = (e) => {
         e.preventDefault();
