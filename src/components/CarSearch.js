@@ -12,7 +12,7 @@ function CarSearch(props) {
                 props.setCars(data.Results);
                 props.setCurrentMake(makeName);
                 props.setNotification("");
-                console.log(data);
+                // console.log(data);
             })
             .catch(error => {
                 console.log(error);

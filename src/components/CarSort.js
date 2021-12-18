@@ -7,7 +7,7 @@ function CarSort(props) {
     const handleSort = (e) => {
         e.preventDefault();
         const sortVal = e.target.value;
-        console.log(sortVal);
+        // console.log(sortVal);
         props.setSortBy(sortVal);
     };
 

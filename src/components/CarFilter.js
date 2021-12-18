@@ -8,7 +8,7 @@ function CarFilter(props) {
         e.preventDefault();
         const filterVal = e.target.elements.model.value;
         props.setCarFilter(filterVal);
-        console.log(filterVal);
+        // console.log(filterVal);
     };
 
     return (
