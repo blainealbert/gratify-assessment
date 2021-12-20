@@ -5,7 +5,7 @@ function CarList(props) {
         }
     }
     function sortBy(field) {
-        console.log(props.sortBy);
+        //console.log(props.sortBy);
         return function(a, b) {
             if(props.sortBy === "A-Z") {
                 return (a[field] > b[field]) - (a[field] < b[field])
